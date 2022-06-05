@@ -1,0 +1,19 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:Avalonia.Interactions.ViewModels"
+        mc:Ignorable="d" d:DesignWidth="275" d:DesignHeight="100"
+        Width="275" Height="100"
+        x:Class="Avalonia.Interactions.Views.InputWindow"
+        Title="Диалоговое окно">
+    <Design.DataContext>
+        <vm:InputWindowViewModel />
+    </Design.DataContext>
+    <DockPanel>
+        <Button DockPanel.Dock="Bottom" Command="{Binding Input}"
+                Content="Подтвердить" HorizontalAlignment="Right" Margin="20 10" />
+        <NumericUpDown Value="{Binding Number}" Watermark="Число"
+                       ParsingNumberStyle="Float" Increment="0.1" Margin="20" />
+    </DockPanel>
+</Window>
