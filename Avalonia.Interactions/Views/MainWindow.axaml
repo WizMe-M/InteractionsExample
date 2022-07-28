@@ -14,6 +14,8 @@
     </Design.DataContext>
 
     <DockPanel>
+        <Button DockPanel.Dock="Top" Command="{Binding ShowInformDialog}"
+                Content="About this project" HorizontalAlignment="Center" Margin="10" />
         <Button DockPanel.Dock="Top" Command="{Binding ShowConfirmDialog}"
                 Content="Confirm" HorizontalAlignment="Center" Margin="10" />
         <ContentControl Content="{Binding Content}" Margin="10" />

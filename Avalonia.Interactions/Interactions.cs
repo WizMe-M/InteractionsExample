@@ -8,6 +8,8 @@ namespace Avalonia.Interactions;
 /// </summary>
 public static class Interactions
 {
+    public static readonly Interaction<Unit, Unit> Inform = new();
+
     public static readonly Interaction<Unit, bool> Confirm = new();
 
     public static readonly Interaction<decimal, decimal?> InputNumber = new();

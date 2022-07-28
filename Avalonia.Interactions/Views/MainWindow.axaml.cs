@@ -22,6 +22,7 @@ namespace Avalonia.Interactions.Views
             {
                 d(Interactions.Confirm.RegisterHandler(ConfirmAsync));
                 d(Interactions.InputNumber.RegisterHandler(InputAsync));
+                d(Interactions.Inform.RegisterHandler(InformAsync));
             });
         }
 
@@ -43,6 +44,20 @@ namespace Avalonia.Interactions.Views
             var button = await confirmationWindow.ShowDialog(this);
             var result = button is ButtonResult.Ok;
             interaction.SetOutput(result);
+        }
+        
+        private async Task InformAsync(InteractionContext<Unit, Unit> interaction)
+        {
+            var informationWindow = MessageBoxManager.GetMessageBoxStandardWindow(new MessageBoxStandardParams
+            {
+                ButtonDefinitions = ButtonEnum.Ok,
+                ContentTitle = "Information",
+                ContentMessage = "This is the test project with several Interaction<TIn, TOut> usages examples",
+                Icon = MessageBox.Avalonia.Enums.Icon.Info
+            });
+
+            await informationWindow.ShowDialog(this);
+            interaction.SetOutput(Unit.Default);
         }
 
         private async Task InputAsync(InteractionContext<decimal, decimal?> interaction)
