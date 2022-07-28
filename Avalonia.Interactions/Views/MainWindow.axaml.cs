@@ -18,8 +18,11 @@ namespace Avalonia.Interactions.Views
 #if DEBUG
             this.AttachDevTools();
 #endif
-            this.WhenActivated(d => d(Interactions.Confirm.RegisterHandler(ConfirmAsync)));
-            this.WhenActivated(d => d(Interactions.InputNumber.RegisterHandler(InputAsync)));
+            this.WhenActivated(d =>
+            {
+                d(Interactions.Confirm.RegisterHandler(ConfirmAsync));
+                d(Interactions.InputNumber.RegisterHandler(InputAsync));
+            });
         }
 
         private void InitializeComponent()

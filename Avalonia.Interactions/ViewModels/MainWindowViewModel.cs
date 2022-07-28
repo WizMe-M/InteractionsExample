@@ -23,14 +23,7 @@ namespace Avalonia.Interactions.ViewModels
         {
             var result = await Interactions.Confirm.Handle(Unit.Default);
 
-            if (result)
-            {
-                Debug.WriteLine("Confirmation received");
-            }
-            else
-            {
-                Debug.WriteLine("Confirmation aborted");
-            }
+            Debug.WriteLine(result ? "Confirmation received" : "Confirmation aborted");
 
             Content ??= new SubViewModel();
         }
