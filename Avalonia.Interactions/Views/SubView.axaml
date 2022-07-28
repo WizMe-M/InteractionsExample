@@ -10,6 +10,6 @@
     </Design.DataContext>
     <StackPanel HorizontalAlignment="Center" Spacing="20" VerticalAlignment="Center">
         <TextBlock Text="{Binding Number}" />
-        <Button Command="{Binding ShowInputDialog}" Content="Ввести число" />
+        <Button Command="{Binding ShowInputDialog}" Content="Input number" />
     </StackPanel>
 </UserControl>

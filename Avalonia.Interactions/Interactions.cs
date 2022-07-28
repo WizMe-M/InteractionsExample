@@ -4,7 +4,7 @@ using ReactiveUI;
 namespace Avalonia.Interactions;
 
 /// <summary>
-/// Содержит список Intercation
+/// Contains constants of type <see cref="Interaction{TInput,TOutput}"/>
 /// </summary>
 public static class Interactions
 {

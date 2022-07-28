@@ -6,14 +6,14 @@
         mc:Ignorable="d" d:DesignWidth="275" d:DesignHeight="100"
         Width="275" Height="100"
         x:Class="Avalonia.Interactions.Views.InputWindow"
-        Title="Диалоговое окно">
+        Title="Dialog input window">
     <Design.DataContext>
         <vm:InputWindowViewModel />
     </Design.DataContext>
     <DockPanel>
         <Button DockPanel.Dock="Bottom" Command="{Binding Input}"
-                Content="Подтвердить" HorizontalAlignment="Right" Margin="20 10" />
-        <NumericUpDown Value="{Binding Number}" Watermark="Число"
+                Content="Confirm" HorizontalAlignment="Right" Margin="20 10" />
+        <NumericUpDown Value="{Binding Number}" Watermark="A number"
                        ParsingNumberStyle="Float" Increment="0.1" Margin="20" />
     </DockPanel>
 </Window>

@@ -7,7 +7,7 @@
         Width="400" Height="250"
         x:Class="Avalonia.Interactions.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
-        Title="Avalonia.Interactions">
+        Title="Main window">
 
     <Design.DataContext>
         <vm:MainWindowViewModel />
@@ -15,7 +15,7 @@
 
     <DockPanel>
         <Button DockPanel.Dock="Top" Command="{Binding ShowConfirmDialog}"
-                Content="Подтвердить" HorizontalAlignment="Center" Margin="10" />
+                Content="Confirm" HorizontalAlignment="Center" Margin="10" />
         <ContentControl Content="{Binding Content}" Margin="10" />
     </DockPanel>
 </Window>
